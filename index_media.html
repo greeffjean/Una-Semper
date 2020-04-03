@@ -1,57 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-  </head>
 
-  <body>
-    <figure class="figure">
-      <a href="./img/1.jpg" class="image-link ">
-        <img class="photoi" src="./img/1.jpg" alt="">
-      </a>
-    </figure>
-    <figure class="figure">
-        <a href="./img/3.jpg" class="image-link ">
-          <img class="photoi" src="./img/3.jpg" alt="">
-        </a>
-      </figure>
-      <figure class="figure">
-          <a href="./img/12.jpg" class="image-link ">
-            <img class="photoi" src="./img/12.jpg" alt="">
-          </a>
-        </figure>
-        <figure class="figure">
-            <a href="./img/11.jpg" class="image-link ">
-              <img class="photoi" src="./img/11.jpg" alt="">
-            </a>
-          </figure>
-          <figure class="figure">
-              <a href="./img/14.jpg" class="image-link ">
-                <img class="photoi" src="./img/14.jpg" alt="">
-              </a>
-            </figure>
-            <figure class="figure">
-                <a href="./img/8.jpg" class="image-link ">
-                  <img class="photoi" src="./img/8.jpg" alt="">
-                </a>
-              </figure>
-  </body>
+<head>
+  <meta charset="utf-8">
+</head>
 
-  <!--Script-->
-  <script>
-    /* Initialise Viewbox.js */
+<body>
+  <figure class="figure">
+    <a href="./img/1.jpg" class="image-link ">
+      <img class="photoi" src="./img/1.jpg" alt="">
+    </a>
+  </figure>
+  <figure class="figure">
+    <a href="./img/3.jpg" class="image-link ">
+      <img class="photoi" src="./img/3.jpg" alt="">
+    </a>
+  </figure>
+  <figure class="figure">
+    <a href="./img/12.jpg" class="image-link ">
+      <img class="photoi" src="./img/12.jpg" alt="">
+    </a>
+  </figure>
+  <figure class="figure">
+    <a href="./img/11.jpg" class="image-link ">
+      <img class="photoi" src="./img/11.jpg" alt="">
+    </a>
+  </figure>
+  <figure class="figure">
+    <a href="./img/14.jpg" class="image-link ">
+      <img class="photoi" src="./img/14.jpg" alt="">
+    </a>
+  </figure>
+  <figure class="figure">
+    <a href="./img/8.jpg" class="image-link ">
+      <img class="photoi" src="./img/8.jpg" alt="">
+    </a>
+  </figure>
+</body>
+
+<!--Script-->
+<script>
+  /* Initialise Viewbox.js */
   $(function () {
-      $('.image-link').viewbox();
-    });
-     /* Gallery Items Animation */
-     const figurepos = $(".figure").offset().top/2;
-    $(document).on("scroll", function() {
-    if ($(document).scrollTop() > figurepos ) {
+    $('.image-link').viewbox();
+  });
+  /* Gallery Items Animation */
+  const figurepos = $(".figure").offset().top / 2;
+  $(document).on("scroll", function () {
+    if ($(document).scrollTop() > figurepos) {
       $(".figure").addClass("figure-active");
     }
     else {
       $(".figure").removeClass("figure-active");
-    }});
-  </script>
+    }
+  });
+</script>
+
 </html>
