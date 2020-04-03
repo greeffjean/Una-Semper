@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Home</title>
+
+
+<!-- Stylesheets -->
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/uni.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow|Indie+Flower|Open+Sans+Condensed:300|Pacifico"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,500|Assistant:200,300,400,600,700,800"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+</head>
+
+<!-- Loading Portal -->
+<div id="loading">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<body>
+  <!-- Navigation -->
+  <div class="nav" id="nav">
+    <nav>
+<!-- slogan -->
+      <div class="slogan">
+        <h4>Una Semper</h4>
+      </div>
+<!-- dropdown content -->
+      <div class="icons">
+        <div class="dropdown">
+          <a id="icons" href="./about2.html">
+            <p>About</p>
+          </a>
+        </div>
+        <div class="space">/</div>
+        <div class="dropdown">
+          <a href="./paintings.html">
+            <p id="icons" class="lbox"> Paintings </p>
+          </a>
+          <div class="dropdown-content"></div>
+        </div>
+        <div class="space">/</div>
+        <div class="dropdown">
+          <a href="./exhibitions.html">
+            <p id="icons" class="lbox" href=""> Exhibitions </p>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+  <!--Mobile Menu-->
+  <div class="mobile-nav">
+    <div class="open"><span></span>
+      <span></span>
+      <span></span></div>
+    <div class="slidebar">
+      <a href="./about2.html">
+        <p>About</p>
+      </a>
+      <a href="./paintings.html">
+        <p>Paintings</p>
+      </a>
+      <a href="./exhibitions.html">
+        <p>Exhibitions</p>
+      </a>
+    </div>
+  </div>
+
+
+  <!--banner-->
+  <div class="banner">
+    <div class="banner-overlay">
+      <div class="say">
+        <div class="posit">
+          <span class="philo">"Art is created when essence is </span> <span id="red"> <b>captured</b> </span>
+          <span>"</span> <span class="name"> - Una</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- Sign Up -->
+  <div class="sign_up">
+    <div class="write head">
+      NEWSLETTER
+    </div>
+    <div class="write word">
+      Subscribe to our newsletter to receive updates and news from the studio.
+    </div>
+
+    <!--newsletter-->
+    <form class="newsletter">
+      <input class="email val" type="email" value="" placeholder="Enter your email address" />
+      <input class="email ok" type="submit" value="OK" />
+    </form>
+  </div>
+
+  
+  <!--gallery grid-->
+  <div id='column' class=" hover08 column">
+  </div>
+
+  <!--footer-->
+  <div class="foot">
+    <div>Una Semper</div>
+  </div>
+
+
+
+  <!--Scripts-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./js/Index.js"></script>
+  <script src="./js/jquery.viewbox.min.js"></script>
+  <!--Javascript-->
+  <script type="text/javascript">
+  /* Screen Responsive Compliance */
+      var height =  window.innerHeight;
+    var width = window.innerWidth;
+    $('body').css({height: `${height}`, width: `${width}`})
+
+ /* Start New PageLoad on Top */
+    $(window).scrollTop(0);
+    $(window).on('load', function () {
+      $('#column').load('./index_media.html')
+      $(".say").addClass("say-active");
+      $("#loading").fadeOut(1500);
+    })
+
+        /* Mobile Navigation Animations */
+        $(".open").on("click", function () {
+      $('.open').toggleClass('active');
+      $(".slidebar").toggleClass("nactive");
+    })
+
+     /* Banner Animation */
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 0) {
+        $(".banner").addClass("banner-scroll")
+      }
+      else {
+        $(".banner").removeClass("banner-scroll")
+      }
+    })
+
+
+    /* Sign Up Animation */
+    $(document).on("scroll", function () {
+      const emailpos = $(".sign_up").offset().top / 2;
+    const doc = $(document);
+      if (doc.scrollTop() > emailpos) {
+        $(".sign_up").addClass(".sign_up_active");
+      }
+      else {
+        $(".sign_up").removeClass(".sign_up_active");
+      }
+    })
+    $(".ok").on("click", function (event) {
+      event.preventDefault();
+      $(".ok").hide();
+      $(".ok").siblings(".email").val("");
+    })
+
+    /* Footer Animations */
+    $(document).on("scroll", function () {
+      const footpos = $(".foot").offset().top / 2;
+      if ($(document).scrollTop() > footpos) {
+        $(".foot").addClass("foot-active")
+      }
+      else {
+        $(".foot").removeClass("foot-active");
+      }
+    });
+
+  </script>
+
+</body>
+</html>

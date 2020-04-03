@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paintings</title>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/uni.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/reset.css">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow|Indie+Flower|Open+Sans+Condensed:300|Pacifico"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,500|Assistant:200,300,400,600,700,800"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+</head>
+
+
+<div id="loading">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<body>
+
+
+  <!-- NAV / -->
+  <div class="nav" id="nav">
+    <nav>
+      <div class="slogan">
+        <a href="./index.html">
+          <h4>Una Semper</h4>
+        </a>
+      </div>
+      <div class="icons">
+
+        <div class="dropdown">
+          <a id="icons" href="./about2.html">
+            <p>About</p>
+          </a>
+        </div>
+        <div class="space">
+          /
+        </div>
+
+        <div class="dropdown">
+          <p id="icons" class="lbox" href=""> Painting Catagories </p>
+          <div class="dropdown-content">
+            <a class="a" id="a" href="#gallery">Award Winning</a>
+
+            <a class="a" id="a" href="#contemporary">Contemporary</a>
+          </div>
+        </div>
+
+        <div class="space">
+          /
+        </div>
+
+        <div class="dropdown">
+          <a href="./exhibitions.html">
+            <p id="icons" class="lbox" href=""> Exhibitions </p>
+          </a>
+
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="mobile-nav">
+    <div class="open"><span></span>
+      <span></span>
+      <span></span></div>
+    <div class="slidebar">
+      <a href="./index.html">
+        <p>Home</p>
+      </a>
+      <a href="./about2.html">
+        <p>About</p>
+      </a>
+
+      <a href="./exhibitions.html">
+        <p>Exhibitions</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV / -->
+
+  <div class="medi">
+    <!-- Media Player-->
+    <div class="welcomep">
+      <div class="inner-welcomep">
+       
+      </div>
+    </div>
+    <div id="audioline">
+      <div class="mediPlayer">
+        <p>TO START THIS JOURNEY PLEASE PRESS PLAY</p>
+        <audio id="audio" class="listen" preload="none" data-size="100" src="./Media/22 Encuentros.mp3"></audio>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- Media Player / -->
+
+  <!-- Media Player / -->
+  <!-- Media Player / -->
+  <!-- Media Player / -->
+  <!-- Media Player / -->
+  <!-- Media Player / -->
+
+
+  <!-- Media Player / -->
+
+
+
+  <!-- Media Player / -->
+
+  <div id="gallery">
+
+  </div>
+
+
+
+  <div id="contemporary">
+
+
+  </div>
+
+  <!-- Media Player / -->
+
+  <div class="footer">
+    <div>Una Semper</div>
+  </div>
+
+
+  <!-- Media Player / -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./js/paintings.js"></script>
+  <script type="text/javascript" src="./js/Index.js"></script>
+  <script src="./js/jquery.viewbox.min.js"></script>
+  <script type="text/javascript">
+
+      var height =  window.innerHeight;
+    var width = window.innerWidth;
+    $('body').css({height: `${height}`, width: `${width}`})
+
+$(window).scrollTop(0);
+
+    $(window).on('load', function () {
+      $('#gallery').load('./paintings_gallery.html')
+      $('#contemporary').load('./paintings_contemporary.html')
+      $('.mediPlayer').mediaPlayer();
+      $("#loading").fadeOut(1500);
+    });
+
+
+    const doc = $(document);
+    $(document).on("scroll", function () {
+      if (doc.scrollTop() > 2) {
+        $(".medi").addClass("medi-active");
+      }
+      else {
+        $(".medi").removeClass("medi-active");
+      }
+    })
+
+
+    // Mobile-Nav 
+    $(".open").on("click", function () {
+      $('.open').toggleClass('active');
+      $(".slidebar").toggleClass("nactive");
+    })
+
+    $(".a").on("click", function (event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
+      $(".grite").addClass(".grite.grite-active")
+    });
+
+    var playsize = document.getElementById('audio');
+    var platattr = playsize.getAttribute('data-size'); 
+
+    $(window).ready(function () {
+      if ($(window).width() < "600") {
+        playsize.setAttribute("data-size", "50");
+      }
+      else {
+        return
+      }
+    })
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

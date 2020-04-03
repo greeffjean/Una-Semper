@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/uni.css">
+  <link rel="stylesheet" href="./css/reset.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i,500,500i,700,700i,800,800i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow|Indie+Flower|Open+Sans+Condensed:300|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Inconsolata|Indie+Flower|Laila|Montserrat|Nanum+Gothic|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,500|Assistant:200,300,400,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+
+
+
+
+  </head>
+
+  <div id="loading">  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div> </div>
+  <body>
+
+    <div class="nav" id="nav">
+      <nav>
+        <div class="slogan" >
+            <a href="./index.html"><h4 id="slogan">Una Semper</h4></a>  
+        </div>
+          <div class="icons">
+
+            
+
+              <div class="dropdown">
+  <a href="./paintings.html"> <p id="icons" class="lbox" >Paintings </p></a>
+
+  <div class="dropdown-content">
+
+  </div>
+</div>
+<div class="space">
+  /
+</div>
+
+<div class="dropdown">
+  <a href="./exhibitions.html"><p id="icons" class="lbox" href="">Exhibitions </p></a> 
+</div>
+
+
+          </div>
+      </nav>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="open"><span></span>
+         <span></span>
+         <span></span></div>  
+        <div class="slidebar">
+           <a  href="./index.html"> <p>Home</p> </a>
+ <a href="./paintings.html">  <p>Paintings</p> </a>
+ <a href="./exhibitions.html"> <p>Exhibitions</p> </a>
+        </div>
+       </div>
+
+            <!--PROFILE-->
+
+       
+            <div class="cover-img"> <img src="img/exhibits/1-Erin-Hanson-Artist-Painting-Live.jpg" alt="">  </div>
+
+<div class="writeupa">
+  <div class="preci"><h2>________</h2>  <h1>ABOUT</h1> <h3>purpose driven humanbeing</h3> </div>
+  <div class="bodypa">
+    <p>
+
+      I was born in Cape Town, South Africa, I love the Cape, it is without question my home and no other place on earth can replace this it. 
+      I am the way I am, and for that matter create the way I create not becuase of exposure or experience, or study - but because of my soul - spirit - life purpose. 
+      <br>
+      <br>
+     
+      My inner governs my expression and my expression cannot lie, that is what I love about it so much, its not other peoples truths that frightens me its my truth. When I express from deep within I feel like I am wielding a power allmighty that speaks powerfully and direct.
+      I find immense purpose in artistic expression and without that purpose I would never have be propelled to create anything - the purpose I find in my expression is - sharing - the - messages - that - come - to - me - from - within - that - the world - needs - to - hear. Service to others gives me something that fills me. 
+     <br><br>
+     There is still so much to learn about me that I don't yet know - I believe I need you, the reader, to assist me to remember all of who I am by participating in your own expression from deep within and hopefully sharing that with me.
+     
+     
+     </p></div>
+   </div>
+
+
+
+
+
+
+          <div class="foot">
+              Una Semper
+          </div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/about.js"></script>
+
+<script>
+
+$(window).ready(function () {
+$(".preci").hide().fadeIn(15000);
+})
+
+$(document).on("scroll" ,function () {
+if ($(document).scrollTop() > 0) {
+  $(".bodypa").addClass("active");
+}
+
+else {
+  $(".bodypa").removeClass("active");
+}
+});
+
+// footer styling
+
+const footpos = $(".foot").offset().top/2;
+$(document).on("scroll", function() {
+$(".foot").addClass("foot-active")
+  
+})
+// Mobile-Nav 
+
+$(".open").on("click", function() {
+  $('.open').toggleClass('active');
+  $(".slidebar").toggleClass("nactive");
+})
+
+$(window).on('load', function(){
+                $( "#loading" ).fadeOut(2500);
+                });
+
+
+
+
+</script>
+</body>

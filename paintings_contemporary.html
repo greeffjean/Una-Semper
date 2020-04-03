@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+  <body>
+    <div id="crite" class="crite">  <h1 class="paintings">  PAINTINGS</h1>
+      <p class="under-title"> Contemporary </p></div>
+
+  <div class="container-img3">
+      <a href="img/10.jpg" class="image-link " title="Image Title">
+        <div id="p9" class="photo"></div>
+        </a>
+    
+          <a href="img/11.jpg" class="image-link " title="Image Title">
+        <div id="p10" class="photo"></div>
+        </a>
+    
+        <a href="img/12.jpg" class="image-link " title="Image Title">
+          <div id="p11" class="photo"></div>
+          </a>
+    
+          <a href="img/13.jpg" class="image-link " title="Image Title">
+            <div id="p12" class="photo"></div>
+            </a>
+    
+            <a href="img/14.jpg" class="image-link " title="Image Title">
+              <div id="p13" class="photo"></div>
+              </a>
+    
+              <a href="img/15.jpg" class="image-link " title="Image Title">
+                <div id="p14" class="photo"></div>
+                </a>
+    
+                <a href="img/16.jpg" class="image-link " title="Image Title">
+                  <div id="p15" class="photo"></div>
+                  </a>
+    
+                  <a href="img/17.jpg" class="image-link " title="Image Title">
+                    <div id="p16" class="photo"></div>
+                    </a>
+  </div>
+  </body>
+
+  <script>
+    
+// paintings headings
+
+
+ $(document).on("scroll", function() {
+  if(doc.scrollTop() > crite){ $(".crite").addClass("crite-active");}
+else { $(".crite").removeClass("crite-active");}
+ })
+
+ $(document).on("scroll", function() {
+  if(doc.scrollTop() > 0){ $(".vid").addClass("vactive");}
+else { $(".vid").removeClass("vactive");}
+ })
+ 
+ 
+ // paintings
+
+ const crite = $(".crite").offset().top/1.5;
+ const cont3 =  $(".container-img3").offset().top/1.5;
+
+  // paintings images
+
+
+$(document).on("scroll", function() {
+    if (doc.scrollTop() > cont3) {
+  $(".container-img3").addClass("active");
+}
+else { $(".container-img3").removeClass("active");}
+ })
+;
+  </script>
+</html>

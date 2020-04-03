@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+  <head>
+    <meta charset="utf-8">
+
+  <body>
+    <div class="grite"><h1 class="paintings">  PAINTINGS</h1>
+      <p class="under-title"> Award Winning </p></div>
+    
+    <div class="container-img1">
+  
+   <a href="img/1.jpg" class="image-link " title="Image Title">
+      <div id="p1" class="photo"></div>
+      </a>
+  
+        <a href="img/2.jpg" class="image-link " title="Image Title">
+      <div id="p2" class="photo"></div>
+      </a>
+  
+      <a href="img/3.jpg" class="image-link " title="Image Title">
+        <div id="p3" class="photo"></div>
+        </a>
+  
+        <a href="img/9.jpg" class="image-link " title="Image Title">
+          <div id="p4" class="photo"></div>
+          </a>
+  
+          <a href="img/5.jpg" class="image-link " title="Image Title">
+            <div id="p5" class="photo"></div>
+            </a>
+  
+            <a href="img/6.jpg" class="image-link " title="Image Title">
+              <div id="p6" class="photo"></div>
+              </a>
+  
+              <a href="img/7.jpg" class="image-link " title="Image Title">
+                <div id="p7" class="photo"></div>
+                </a>
+  
+                <a href="img/8.jpg" class="image-link " title="Image Title">
+                  <div id="p8" class="photo"></div>
+                  </a>
+    </div>
+  
+  </body>
+
+  <script>
+    
+    $(function () {
+      $('.image-link').viewbox();
+    });
+// paintings headings
+
+$(document).on("scroll", function() {
+if (doc.scrollTop() > grite) {
+  $(".grite").addClass("grite-active");
+}
+else { $(".grite").removeClass("grite-active");}
+ })
+
+  // paintings
+
+  const grite = $(".grite").offset().top/2.5;
+ const cont1 =  $(".container-img1").offset().top/2.5;
+
+  // paintings images
+
+
+  $(document).on("scroll", function() {
+    if (doc.scrollTop() > cont1) {
+  $(".container-img1").addClass("active");
+}
+else { $(".container-img1").removeClass("active");}
+ })
+
+
+  </script>
+</html>
