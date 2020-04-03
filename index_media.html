@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+  </head>
 
   <body>
     <figure class="figure">
@@ -37,11 +38,13 @@
               </figure>
   </body>
 
+  <!--Script-->
   <script>
+    /* Initialise Viewbox.js */
   $(function () {
       $('.image-link').viewbox();
     });
-     //Figure Styling
+     /* Gallery Items Animation */
      const figurepos = $(".figure").offset().top/2;
     $(document).on("scroll", function() {
     if ($(document).scrollTop() > figurepos ) {
