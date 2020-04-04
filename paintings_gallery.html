@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
   <body>
-    <div class="grite"><h1 class="paintings">  PAINTINGS</h1>
+    <div class="top_gallery"><h1 class="paintings">  PAINTINGS</h1>
       <p class="under-title"> Award Winning </p></div>
     
     <div class="container-img1">
@@ -54,15 +54,15 @@
 // paintings headings
 
 $(document).on("scroll", function() {
-if (doc.scrollTop() > grite) {
-  $(".grite").addClass("grite-active");
+if (doc.scrollTop() > top_gallery) {
+  $(".top_gallery").addClass("active");
 }
-else { $(".grite").removeClass("grite-active");}
+else { $(".top_gallery").removeClass("active");}
  })
 
   // paintings
 
-  const grite = $(".grite").offset().top/2.5;
+  const top_gallery = $(".top_gallery").offset().top/2.5;
  const cont1 =  $(".container-img1").offset().top/2.5;
 
   // paintings images

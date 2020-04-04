@@ -87,14 +87,14 @@
 
   <!--Introduction-->
   <div class="introduction">
-    <div class="gal"></div>
+    <div class="header_img"></div>
   </div>
 
 
 
   <!--Catalogues -->
   <div class="container-fluid Catalogue1">
-    <div class="contente">
+    <div class="content_cat">
       <h1>Moments</h1>
       <h3>March 1993</h3>
       <p>"Queens in Exile is about telling better stories. This isn’t simply a revisionist exercise, patching up
@@ -111,7 +111,7 @@
       </div>
     </div>
     <!-- section1-->
-    <div class="contente c1">
+    <div class="content_cat c1">
       <h1>Textures</h1>
       <h3>March 1993</h3>
       <p>Recent exhibitions and performances include: Art Afrique, Louis Vuitton Foundation, Paris; Over the Rainbow,
@@ -130,7 +130,7 @@
   <!--section2-->
   <div class="cat-cont2">
     <div class="container-fluid Catalogue2">
-      <div class="greyc contente">
+      <div class="greyc content_cat">
         <h1>Understanding</h1>
         <h3>February 1993</h3>
         <p>"Queens in Exile is about telling better stories. This isn’t simply a revisionist exercise, patching up
@@ -146,7 +146,7 @@
         </div>
       </div>
 
-      <div class="greyc contente c1">
+      <div class="greyc content_cat c1">
         <h1>Hopes</h1>
         <h3>September 2003</h3>
         <p>Recent exhibitions and performances include: Art Afrique, Louis Vuitton Foundation, Paris; Over the Rainbow,
@@ -197,7 +197,7 @@
         /* Mobile Navigation Animation */
         $(".open").on("click", function () {
       $('.open').toggleClass('active');
-      $(".slidebar").toggleClass("nactive");
+      $(".slidebar").toggleClass("active");
     })
 
     /*Load Dom Content After Doc.Load*/
@@ -215,20 +215,20 @@
     $(document).on("scroll", function () {
       const catalog1 = $(".Catalogue1").offset().top / 2;
     const catalog2 = $(".cat-cont2").offset().top / 1.5;
-      if ($(document).scrollTop() > 10) { $(".Catalogue1").addClass("cactive"); }
+      if ($(document).scrollTop() > 10) { $(".Catalogue1").addClass("active"); }
       else {
-        $(".Catalogue1").removeClass("cactive");
+        $(".Catalogue1").removeClass("active");
       }
-      if ($(document).scrollTop() > catalog2) { $(".Catalogue2").addClass("cactive") }
+      if ($(document).scrollTop() > catalog2) { $(".Catalogue2").addClass("active") }
       else {
-        $(".Catalogue2").removeClass("cactive");
+        $(".Catalogue2").removeClass("active");
       }
     })
 
     $(document).on("scroll", function () {
-      if ($(document).scrollTop() > 0) { $(".gal").addClass("active") }
+      if ($(document).scrollTop() > 0) { $(".header_img").addClass("active") }
       else {
-        $(".gal").removeClass("active");
+        $(".header_img").removeClass("active");
       }
     })
 

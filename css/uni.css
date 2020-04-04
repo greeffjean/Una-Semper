@@ -80,7 +80,7 @@ html, body {
   opacity: 0;
   }
   
-  .slidebar.nactive {
+  .slidebar.active {
 	  opacity: 1;
 	  margin-left: 0;
 	  -webkit-transition: 2000ms;
@@ -593,19 +593,19 @@ html, body {
   }
   
 
-  /* Home Gallery */
-  .home_gallery figure img {
+  /* Home header_imglery */
+  .home_header_imglery figure img {
 	  -webkit-transition: 200ms;
 	  transition: 200ms;
   }
-  .home_gallery figure:hover img {
+  .home_header_imglery figure:hover img {
 	  -webkit-transform: scale(.9);
 			  transform: scale(.9);
 	  -webkit-transition: 1000ms;
 	  transition: 1000ms;
   }
 
-  .home_gallery{
+  .home_header_imglery{
 	width: 98%;
 	height: 80vh; 
   display: -webkit-box; 
@@ -650,7 +650,7 @@ html, body {
 	  transition: 2000ms;
   }
   
-  /*Hoem Gallery Media-Queries*/
+  /*Hoem header_imglery Media-Queries*/
 	@media only screen and (max-width: 1668px) {
 		  .photoi{
 			  width: 400px;
@@ -858,7 +858,7 @@ html, body {
   color: hsl(0, 0%, 35%);
   }
   
-  .writeupa {
+  .write_up {
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -877,25 +877,25 @@ html, body {
 	padding-top: 5vh;
   }
   
-  .writeupa div {
+  .write_up div {
 	width: 50%;
   }
   
-  .bodypa.active {
+  .write_up_body.active {
 	opacity: 1;
 	margin-top: 0;
 	-webkit-transition: 2000ms;
 	transition: 2000ms;
   }
   
-  .bodypa {
+  .write_up_body {
 	opacity: 1;
 	margin-top: 20rem;
 	-webkit-transition: 2000ms;
 	transition: 2000ms;
   }
   
-  .bodypa p {
+  .write_up_body p {
 	  font-family: 'Assistant', sans-serif;
 	  font-size: 1.3rem;
 	  letter-spacing: 1px;
@@ -923,10 +923,10 @@ html, body {
 		  .preci h3 {
 		  font-size: 1rem;
 		  }
-		  .bodypa p {
+		  .write_up_body p {
 			  font-size: 1.3rem;
 			}
-			.writeupa div {
+			.write_up div {
 			  width: 70%;
 			}
 	  
@@ -937,7 +937,7 @@ html, body {
 		  height: 40vh;
 	  
 		}
-		.writeupa div {
+		.write_up div {
 		  width: 80%;
 		}
   }
@@ -1356,7 +1356,7 @@ html, body {
 	  transition: 1s;
   }
   
-  #gallery{
+  #header_imglery{
 	  width: 100%;
   margin: 7rem auto;
   padding-top: 7rem;
@@ -1456,26 +1456,26 @@ html, body {
 			  justify-content: center;
   }
   
-  .grite {
+  .top_header_imglery {
   opacity: 0;
   margin-top: -10rem;
   -webkit-transition: 2000ms;
   transition: 2000ms;
   }
-  .crite {
+  .contemporary_header_imglery {
 	  opacity: 0;
   margin-top: -10rem;
   -webkit-transition: 2000ms;
   transition: 2000ms;
   }
 
-  .grite.grite-active {
+  .top_header_imglery.active {
 	  opacity: 1;
 	  margin-top: 10rem;
   -webkit-transition: 2000ms;
   transition: 2000ms;
   }
-  .crite.crite-active {
+  .contemporary_header_imglery.active {
 	  opacity: 1;
 	  margin-top: 3rem;
   -webkit-transition: 2000ms;
@@ -1886,7 +1886,7 @@ html, body {
 				  width:600px ;
 				  height:300px ;
 			  }
-	  #gallery{
+	  #header_imglery{
 		  width: 98%;
 	  }
   }
@@ -1963,7 +1963,7 @@ html, body {
 				  width:350px ;
 				  height:300px ;
 			  }
-	  #gallery{
+	  #header_imglery{
 		  width: 98%;
 	  }
   }
@@ -1987,7 +1987,7 @@ html, body {
 	  width: 100%;
   }
   
-  .gal {
+  .header_img {
 	  margin-top: 10rem;
 	  height: 80%;
 	  width: 70%;
@@ -1998,7 +1998,7 @@ html, body {
 	  background-size: cover;
   }
   
-  .gal.active {
+  .header_img.active {
 	  width: 60%;
 	  -webkit-transition: 1000ms;
 	  transition: 1000ms;
@@ -2006,22 +2006,22 @@ html, body {
 
   /*top section media queries */
   @media only screen and (max-width: 1200px){
-	.gal {
+	.header_img {
 		height: 70%;
 		width: 90%;
 	}
   }
   @media only screen and (max-width: 900px){
-	.gal {
+	.header_img {
 		height: 70%;
 		width: 90%;
 	}
-	.gal.active {
+	.header_img.active {
 		width: 85%;
 	}
   }
   
-  .gal:hover {
+  .header_img:hover {
 	  -webkit-filter: grayscale(100%);
 	  -moz-filter: grayscale(100%);
 	  -ms-filter: grayscale(100%);
@@ -2048,14 +2048,14 @@ html, body {
 	  opacity: .5;
   }
   
-  .Catalogue1.cactive {
+  .Catalogue1.active {
 	  opacity: 1;
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
 	  transition: opacity 5s, transform 2s ;
   }
-  .Catalogue2.cactive {
+  .Catalogue2.active {
 	  background: hsl(228, 93%, 11%);
 	  opacity: 1;
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
@@ -2064,7 +2064,7 @@ html, body {
 	  transition: opacity 5s, transform 2s ;
 
   }
-  .Catalogue3.cactive {
+  .Catalogue3.active {
 	  opacity: 1;
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
@@ -2135,19 +2135,19 @@ html, body {
 	
 	}
   
-	.contente.greyc {
+	.content_cat.greyc {
 	  border: 1px solid hsl(0, 0%, 86%);
 	}
   
-	.contente.greyc h3 {
+	.content_cat.greyc h3 {
 		color: hsl(0, 0%, 88%);
 	}
   
-	.contente.greyc h1 {
+	.content_cat.greyc h1 {
 		color: hsl(0, 0%, 100%);
 	}
   
-  .contente{
+  .content_cat{
   width: 45%;
 	border: 1px solid lightgrey;
 	padding: 2rem;
@@ -2158,12 +2158,12 @@ html, body {
 
   /*catalogue media queries*/
   @media only screen and (max-width: 1300px) {
-	  .contente{
+	  .content_cat{
 		  width: 80%;
 		  }
   }
   @media only screen and (max-width: 500px) {
-	  .contente{
+	  .content_cat{
 		  width: 98%;
 		  }
 		  .photoe{
@@ -2172,7 +2172,7 @@ html, body {
 			}
   }
 
-  .greyc.contente p{
+  .greyc.content_cat p{
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-family: "Assistant";
@@ -2181,21 +2181,21 @@ html, body {
   color: hsl(0, 0%, 100%);
   }
   
-  .greyc.contente h1{
+  .greyc.content_cat h1{
 	text-align: left;
 	padding: .5rem;
 	letter-spacing: 5px;
 	color: hsl(0, 0%, 95%);
   }
   
-  .greyc.contente h3{
+  .greyc.content_cat h3{
 	font-size: 1.7rem;
 	color: hsl(0, 0%, 85%);
 	margin: 2rem 0;
 	  text-align: left;
   }
  
-	.contente h1{
+	.content_cat h1{
 	  text-align: left;
 	  padding: .5rem;
 	  letter-spacing: 5px;
@@ -2203,7 +2203,7 @@ html, body {
 	}
 	
 	
-	.contente h3{
+	.content_cat h3{
 	  font-size: 1.7rem;
 	  color: hsl(0, 0%, 9%);
 	  margin: 2rem 0;

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
   <body>
-    <div id="crite" class="crite">  <h1 class="paintings">  PAINTINGS</h1>
+    <div id="contemporary_gallery" class="contemporary_gallery">  <h1 class="paintings">  PAINTINGS</h1>
       <p class="under-title"> Contemporary </p></div>
 
   <div class="container-img3">
@@ -49,19 +49,12 @@
 
 
  $(document).on("scroll", function() {
-  if(doc.scrollTop() > crite){ $(".crite").addClass("crite-active");}
-else { $(".crite").removeClass("crite-active");}
+  if(doc.scrollTop() > contemporary_gallery){ $(".contemporary_gallery").addClass("active");}
+else { $(".contemporary_gallery").removeClass("active");}
  })
 
- $(document).on("scroll", function() {
-  if(doc.scrollTop() > 0){ $(".vid").addClass("vactive");}
-else { $(".vid").removeClass("vactive");}
- })
- 
- 
  // paintings
-
- const crite = $(".crite").offset().top/1.5;
+ const contemporary_gallery = $(".contemporary_gallery").offset().top/1.5;
  const cont3 =  $(".container-img3").offset().top/1.5;
 
   // paintings images
