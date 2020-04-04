@@ -92,10 +92,10 @@
   <!--banner-->
   <div class="banner">
     <div class="banner-overlay">
-      <div class="say">
-        <div class="posit">
-          <span class="philo">"Art is created when essence is </span> <span id="red"> <b>captured</b> </span>
-          <span>"</span> <span class="name"> - Una</span>
+      <div class="write_up_index_container">
+        <div class="write_up_index_content">
+          <span class="philosophy">"Art is created when essence is </span> <span id="red"> <b>captured</b> </span>
+          <span>"</span> <span class="name"> - Una Semper</span>
         </div>
       </div>
     </div>
@@ -106,23 +106,23 @@
 
   <!-- Sign Up -->
   <div class="sign_up">
-    <div class="write head">
+    <div class="sign_up_content head">
       NEWSLETTER
     </div>
-    <div class="write word">
+    <div class="sign_up_content word">
       Subscribe to our newsletter to receive updates and news from the studio.
     </div>
 
     <!--newsletter-->
     <form class="newsletter">
-      <input class="email val" type="email" value="" placeholder="Enter your email address" />
-      <input class="email ok" type="submit" value="OK" />
+      <input class="email_val" type="email" value="" placeholder="Enter your email address" />
+      <input class="email_submission" type="submit" value="OK" />
     </form>
   </div>
 
 
   <!--gallery grid-->
-  <div id='column' class=" hover08 column">
+  <div id='column' class=" home_gallery column">
   </div>
 
   <!--footer-->
@@ -147,7 +147,7 @@
     $(window).scrollTop(0);
     $(window).on('load', function () {
       $('#column').load('./index_media.html')
-      $(".say").addClass("say-active");
+      $(".write_up_index_container").addClass("active");
       $("#loading").fadeOut(1500);
     })
 
@@ -173,16 +173,23 @@
       const emailpos = $(".sign_up").offset().top / 2;
       const doc = $(document);
       if (doc.scrollTop() > emailpos) {
-        $(".sign_up").addClass(".sign_up_active");
+        $(".sign_up").addClass("active");
+        $(".newsletter").addClass("active");
       }
       else {
-        $(".sign_up").removeClass(".sign_up_active");
+        $(".sign_up").removeClass("active");
+        $(".newsletter").removeClass("active");
       }
     })
-    $(".ok").on("click", function (event) {
+    $(".email_submission").on("click", function (event) {
       event.preventDefault();
-      $(".ok").hide();
-      $(".ok").siblings(".email").val("");
+      $(".email_val").val("");
+      $('.email_val').css({background: "hsl(120, 57%, 91%)"})
+      $('.email_val').attr("placeholder", "Success!")
+      setTimeout(function(){
+        $('.email_val').css({background: "none"})
+      $('.email_val').attr("placeholder", "Enter your email address")
+      }, 3000)
     })
 
     /* Footer Animations */

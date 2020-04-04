@@ -194,7 +194,6 @@
        $(function () {
       $('.image-link').viewbox();
     });
-
         /* Mobile Navigation Animation */
         $(".open").on("click", function () {
       $('.open').toggleClass('active');
@@ -203,10 +202,10 @@
 
     /*Load Dom Content After Doc.Load*/
     $(window).on('load', function () {
-      $('.photos1').load('e1.html');
-      $('.photos2').load('e2.html');
-      $('.photos3').load('e3.html');
-      $('.photos4').load('e4.html');
+      $('.photos1').load('./e1.html');
+      $('.photos2').load('./e2.html');
+      $('.photos3').load('./e3.html');
+      $('.photos4').load('./e4.html');
       $("#loading").fadeOut(2500);
     });
  
@@ -216,18 +215,18 @@
     $(document).on("scroll", function () {
       const catalog1 = $(".Catalogue1").offset().top / 2;
     const catalog2 = $(".cat-cont2").offset().top / 1.5;
-      if (doc.scrollTop() > 10) { $(".Catalogue1").addClass("cactive"); }
+      if ($(document).scrollTop() > 10) { $(".Catalogue1").addClass("cactive"); }
       else {
         $(".Catalogue1").removeClass("cactive");
       }
-      if (doc.scrollTop() > catalog2) { $(".Catalogue2").addClass("cactive") }
+      if ($(document).scrollTop() > catalog2) { $(".Catalogue2").addClass("cactive") }
       else {
         $(".Catalogue2").removeClass("cactive");
       }
     })
 
     $(document).on("scroll", function () {
-      if (doc.scrollTop() > 0) { $(".gal").addClass("active") }
+      if ($(document).scrollTop() > 0) { $(".gal").addClass("active") }
       else {
         $(".gal").removeClass("active");
       }
@@ -239,35 +238,31 @@
     const image2 = $(".photos2").offset().top / 2;
     const image3 = $(".photos3").offset().top / 1.1;
     const image4 = $(".photos4").offset().top / 1.7;
-    const doc = $(document);
-      if (doc.scrollTop() > image1) {
+      if ($(document).scrollTop() > image1) {
         $(".photos1").addClass("active");
       }
       else {
         $(".photos1").removeClass("active");
       }
-      if (doc.scrollTop() > image1) {
+      if ($(document).scrollTop() > image1) {
         $(".photos2").addClass("active");
       }
       else {
         $(".photos2").removeClass("active");
       }
-      if (doc.scrollTop() > image1) {
+      if ($(document).scrollTop() > image1) {
         $(".photos3").addClass("active");
       }
       else {
         $(".photos3").removeClass("active");
       }
-      if (doc.scrollTop() > image1) {
+      if ($(document).scrollTop() > image1) {
         $(".photos4").addClass("active");
       }
       else {
         $(".photos4").removeClass("active");
       }
     })
-
-
-
   </script>
 
 </body>

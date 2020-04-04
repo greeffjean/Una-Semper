@@ -1,12 +1,11 @@
-/* Index */
-
 
 html, body {
 	scroll-behavior: smooth;
 }
-/* NAV-mobile */
 
+/* index.html !  */
 
+/* Navigation-Mobile */
 .open span{
 	width: 45px;
 	height: 4px;
@@ -47,7 +46,6 @@ html, body {
 	  font-weight: normal;
 	  -webkit-transition: 200ms;
 	  transition: 200ms;
-	  
   }
   
   .slidebar a:hover {
@@ -111,13 +109,9 @@ html, body {
   .menu-items a{
 	  text-decoration: none;
   }
+
   
-  
-  /* NAV-mobile */
-  
-  
-  /* DropDOWNS */
-  
+  /* Dropdown  */
   #dropdown{
 	  height: 10rem;
 	  width: 5rem;
@@ -127,10 +121,6 @@ html, body {
 	  bottom: 0;
   }
   
-  
-  /* Dropdown Button */
-  
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
 	position: relative;
 	display: -webkit-box;
@@ -179,8 +169,6 @@ html, body {
   }
   
   
-  
-  
   /* Links inside the dropdown */
   .dropdown-content #a {
 	padding: 15px 0;
@@ -194,7 +182,6 @@ html, body {
 	  font-family: 'Assistant', sans-serif;
   
   }
-  
   .shrink .icons {
 	  margin-right: 13rem;
 	  -webkit-transition: 2000ms;
@@ -211,7 +198,6 @@ html, body {
 	  color: grey;
 	  letter-spacing: 3px;
 	  font-family: 'Assistant', sans-serif;
-  
   }
   
   /* Change color of dropdown links on hover */
@@ -223,29 +209,17 @@ html, body {
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;
-  
   }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  
-  
-  /* DropDOWNSMOBILE */
-  
-  
-  
-  
-  
-  /* DropDOWNS */
-  
+
   .space{display: none;
   ;}
   
-  
+
+  /* Navigation Desktop */
   #icons {
 	  text-decoration: none;
 	  padding: 1rem 2rem;
 	  color: hsl(293, 4%, 61%);
-  
   }
   
   .icons p{
@@ -276,8 +250,7 @@ html, body {
 	  letter-spacing: 1.5px;
 	  color: hsl(293, 4%, 61%);
   }
-  
-  
+   
   .nav{
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -297,8 +270,7 @@ html, body {
   .shrink.nav {
 	  margin-top: 0;
 	  -webkit-transition: 1000ms;
-	  transition: 1000ms;
-	  
+	  transition: 1000ms; 
   }
   
   .slogan{
@@ -365,13 +337,8 @@ html, body {
   
   }
   
-  /* MOBILE_MENU */
-  
-  
-  
-  /* MOBILE_MENU */
-  
-  
+
+  /* Navigation Media Queries */
   @media only screen and (max-width: 1058px){
 	  #nav{
 		  display: none;
@@ -379,23 +346,17 @@ html, body {
   
 	  .mobile-nav {
 		  display: block;
-	  }
-	  
+	  }	  
   }
   
   @media only screen and (max-width: 500px){
 	  .open {
 		  padding: 1rem;
-	  }
-	  
+	  }	  
   }
+
   
-  
-  /* NAV */
-  
-  
-  /* BANNER */
-  
+  /* Banner */
   .mobile img{
 	  display: none;
   }
@@ -405,7 +366,6 @@ html, body {
 	  -webkit-transition: 2000ms;
 	  transition: 2000ms;
   }
-  
   
   .banner{
 	width: 100%;
@@ -432,24 +392,22 @@ html, body {
 	  -webkit-box-align: center;
 		  -ms-flex-align: center;
 			  align-items: center;
-  
   }
   
-  .say.say-active {
+  .write_up_index_container.active {
 	  margin-left: 0;
 	  padding: 0 1rem;
 	  -webkit-transition: 2000ms;
 	  transition: 2000ms;
-  
   }
   
-  .say.say-active span {
+  .write_up_index_container.active span {
 	  color: white;
 	  -webkit-transition: 3000ms;
 	  transition: 3000ms;
   }
   
-  .say{	
+  .write_up_index_container{	
   z-index: 0;
 	border: none;
 	font-size: 3rem;
@@ -468,7 +426,7 @@ html, body {
   text-align: center;
   }
   
-  .say span{
+  .write_up_index_container span{
 	font-size: 3rem;
 	color: transparent;
   }
@@ -477,7 +435,7 @@ html, body {
 	  color: transparent;
   }
   
-  .say.say-active #red {
+  .write_up_index_container.active #red {
 	color: hsl(182, 29%, 74%);
 	-webkit-transition: 3000ms;
 	transition: 3000ms;
@@ -492,41 +450,31 @@ html, body {
 	width: 100%;
   }
   
-  
+  /*Banner Media Queries*/
   @media only screen and (max-width: 1233px){
-  .posit{
+  .write_up_index_content{
 	  font-size: 2.5rem;
   }
   }
   
   @media only screen and (max-width: 1058px){
-  .posit{
+  .write_up_index_content{
 	  font-size: 2rem;
   }
-  
   }
   
   @media only screen and (max-width: 600px){
-	  .say{		
+	  .write_up_index_container{		
 			font-size: 2rem;
 		  }
 		  
-		  .say span{
+		  .write_up_index_container span{
 			font-size: 2rem;
 		  }
-	  
 	  }
-	  
-  
-  
-  
-  /* BANNER */
-  
-  
-  
-  /* INBETWEEN */
 
-  
+
+  /* Sign Up */
   .sign_up{
 	width: 90%;
 	height: 18rem;
@@ -536,8 +484,7 @@ html, body {
 	overflow: hidden;
   }
 
-    
-  .sign_up.sign_up_active {
+  .sign_up.active {
 	background-color: hsla(177, 59%, 58%, 0.09);
 	-webkit-transition: all, 200ms;
 	transition: all, 200ms;
@@ -547,8 +494,7 @@ html, body {
 	  font-family: 'Assistant', sans-serif;
   }
   
-  .head{
-	  
+  .head{	  
   border-radius: 4px;
   font-size: 2rem;
   padding-top: 3.5rem;
@@ -558,17 +504,16 @@ html, body {
   color: hsla(208, 29%, 39%, 0.588);
   -webkit-transition: 2000ms;
   transition: 2000ms;
-  
   }
   
-  .sign_up.sign_up_active .head {
+  .sign_up.active .head {
 	  margin-left: 0;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
 	  transition: 2000ms;
   }
   
-  .sign_up.sign_up_active .word {
+  .sign_up.active .word {
 	  margin-right: 0;
   opacity: 1;
   -webkit-transition: 2000ms;
@@ -587,38 +532,42 @@ html, body {
   -webkit-transition: 2000ms;
   transition: 2000ms;
   }
-  
-  .sign_up.sign_up-active .email {
-	  opacity: 1;
-	  -webkit-transform: translate3d(0, 0, 400px) rotateY(360deg) ;
-			  transform: translate3d(0, 0, 400px) rotateY(360deg) ;
-	  -webkit-transition: opacity 2000ms;
-	  transition: opacity 2000ms;
-	  -webkit-transition: -webkit-transform 1000ms;
-	  transition: -webkit-transform 1000ms;
-	  transition: transform 1000ms;
-	  transition: transform 1000ms, -webkit-transform 1000ms;
-  } 
-  
-  .email{
+
+  textarea:focus, input:focus{
+    outline: none;
+}
+
+   .newsletter .email_val{
 	width: 300px;
 	height: 50px;
 	text-align: center;
 	opacity: 0;
-	-webkit-transform-style: preserve-3d;
-			transform-style: preserve-3d;
-	-webkit-transform: perspective(1000px) rotateY(80deg);
-			transform: perspective(1000px) rotateY(80deg);
-	-webkit-transition: 1000ms;
-	transition: 1000ms;
+	transition: 2000ms;
   }
+
+  .newsletter .email_submission {
+    background: white;
+    height: 50px;
+    width: 70px;
+    margin-left: 1rem;
+	background: white;
+	padding: 0.5rem;
+	opacity: 0;
+	transition: 2000ms;
+}
+
+.newsletter.active .email_val {
+	  opacity: 1;
+	  transition: 2000ms;
+  } 
+  .newsletter.active .email_submission {
+	opacity: 1;
+	transition: 2000ms;
+}
+ 
   
-  .ok {
-	  background: white;
-  }
-  
+  /*Sign Up Media-Queries*/
   @media only screen and (max-width: 1058px){
-  
 	  .write{
 		  width: 95%;
 		  margin: 0 auto;
@@ -635,50 +584,28 @@ html, body {
 	  .word{
 	  font-size: 1.5rem;
 	  }
-	  .email.val{
-		  width: 300px;
-		  height: 50px;
-		  font-size: 1rem;
-	  }
-  
-	  .ok {
-		  background: white;
-		  width: 200px;
-		  margin: .5rem;
-	  }
-  
-  
+
   }
   @media only screen and (max-width: 500px) {
-  
 	.sign_up{
 		  height: 23rem;
 	  }
   }
   
-  /* Social Media */
-  
-  .hover08 figure img {
-  
+
+  /* Home Gallery */
+  .home_gallery figure img {
 	  -webkit-transition: 200ms;
-  
 	  transition: 200ms;
   }
-  .hover08 figure:hover img {
-  
+  .home_gallery figure:hover img {
 	  -webkit-transform: scale(.9);
-  
 			  transform: scale(.9);
 	  -webkit-transition: 1000ms;
 	  transition: 1000ms;
   }
-  
-  
-  /* Social Media */
-  
-  
-  /* Social Media */
-  .hover08{
+
+  .home_gallery{
 	width: 98%;
 	height: 80vh; 
   display: -webkit-box; 
@@ -700,7 +627,6 @@ html, body {
 	margin: 0 auto;
   }
   
-  
   .photoi{
 	width: 500px;
 	height: 300px;
@@ -708,7 +634,6 @@ html, body {
 	border-radius: 5px;
 	border: 1px solid lightgrey;
 	margin: 1rem;
-  
   }
   
   .figure.figure-active {
@@ -718,7 +643,6 @@ html, body {
 	  transition: 2000ms;
   }
   
-  
   .figure {
 	  padding-top: 20rem;
 	  opacity: 0;
@@ -726,7 +650,7 @@ html, body {
 	  transition: 2000ms;
   }
   
-  
+  /*Hoem Gallery Media-Queries*/
 	@media only screen and (max-width: 1668px) {
 		  .photoi{
 			  width: 400px;
@@ -741,8 +665,6 @@ html, body {
 		  #tag, #fab{
 			  font-size: 2.4rem;
 		  }
-  
-  
   }
   
   @media only screen and (max-width: 1478px){
@@ -774,8 +696,6 @@ html, body {
   }
   
   @media only screen and (max-width: 1058px) {
-  
-  
 	  .column{
 		  height: 70rem;
 	  }
@@ -787,30 +707,18 @@ html, body {
 		  margin-bottom: 0;
 	  }
   
-  
-  
-  
   figure{
 	  padding-bottom: 0;
 	  margin-bottom: 0;
-  }
-  
-  
-  
-  }
+  } }
   
   
   @media only screen and (max-width: 1019px) {
-  
-  
 	  .column{
 		  height: 71rem;
-	  }
-  }
+	  } }
   
   @media only screen and (max-width: 800px) {
-  
-  
 	  .photoi{
 		  width: 300px;
 		  height: 300px;
@@ -822,35 +730,29 @@ html, body {
   
   
   @media only screen and (max-width: 677px){
-  
 	  .column{
 		  height: 140rem;
 		  font-size: 1rem;
 	  }
+	}
   
-  }
-  
-  @media only screen and (max-width: 445px){
+	  @media only screen and (max-width: 445px){
 	  .instaf{
 		  -webkit-box-orient: vertical;
 		  -webkit-box-direction: normal;
 			  -ms-flex-direction: column;
 				  flex-direction: column;
-  
-	  }
+ }
   }
   
   
-  /* FOOTER */
-  
+  /* Footer */
   .foot.foot-active {
 	  opacity: 1;
 	  padding-top: 0;
 	  -webkit-transition: 2000ms;
-	  transition:  2000ms;
-	  
+	  transition:  2000ms; 
   }
-  
   
   .foot{
 	background-color: hsl(202, 14%, 15%);
@@ -893,109 +795,11 @@ html, body {
 			  align-items: center;
 	  width: 100%;
 	}
+
   
   
-  
-  /* NEWSLETTER */
-  
-  
-  .newsletter:not( .newsletter--active ) input[type='submit']
-  {
-	  display: none;
-  
-  }
-  
-  .cd-form {
-	position: relative;
-  }
-  
-  .cd-form .cd-loading {
-	/* loading bar */
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 3%;
-	width: 100%;
-	-webkit-transform-origin: 0 50%;
-			transform-origin: 0 50%;
-	-webkit-transform: scaleX(0);
-			transform: scaleX(0);
-	visibility: hidden;
-	-webkit-transition: -webkit-transform 3s;
-	transition: -webkit-transform 3s;
-	transition: transform 3s;
-	transition: transform 3s, -webkit-transform 3s;
-  }
-  
-  .cd-form.is-submitted .cd-loading {
-	visibility: visible;
-	-webkit-transform: scaleX(1);
-			transform: scaleX(1);
-  }
-  
-  .cd-email {
-	top: 0;
-	left: 0;
-	width: 100%;
-	bottom: 0;
-	-webkit-transition: bottom 0.3s, background-color 0.3s;
-	transition: bottom 0.3s, background-color 0.3s;
-	z-index: 1;
-  }
-  
-  .is-active .cd-email {
-	bottom: 50%;
-  }
-  
-  .cd-submit {
-	top: 50%;
-	/* hidden by default */
-	display: none;
-	-webkit-transition: background-color 0.2s;
-	transition: background-color 0.2s;
-	z-index: 2;
-  }
-  
-  .is-active .cd-submit {
-	display: block;
-	-webkit-animation: cd-bounce-in ease-out 0.4s;
-			animation: cd-bounce-in ease-out 0.4s;
-  }
-  
-  @-webkit-keyframes cd-bounce-in {
-	0% {
-	  top: 100%;
-	}
-  
-	60% {
-	  top: 45%;
-	}
-  
-	100% {
-	  top: 50%;
-	}
-  }
-  
-  @keyframes cd-bounce-in {
-	0% {
-	  top: 100%;
-	}
-  
-	60% {
-	  top: 45%;
-	}
-  
-	100% {
-	  top: 50%;
-	}
-  }
-  
-  
-  /* About */
-  
-  
+  /* about.html !  */
   /* Cover-Img */
-  
   .content {
 	min-height: 100vh;
 	display: -webkit-box;
@@ -1136,16 +940,12 @@ html, body {
 		.writeupa div {
 		  width: 80%;
 		}
-  
-  
-	  
   }
   
   
   
   
-  /* Paintings */
-  
+  /* paintings.html! */
   /* VIEWBOX */
   
   .viewbox-container{
@@ -1303,8 +1103,6 @@ html, body {
   
   
   /* Media Player */
-  
-  
   *,
   *:after,
   *:before {
@@ -1329,14 +1127,11 @@ html, body {
   .mediPlayer .not-started .play, .mediPlayer .paused .play {
 	  opacity : 1;
 	  color: grey;
-  
-  
   }
   
   .mediPlayer .playing .pause {
 	  opacity : 1;
 	  color: grey;
-  
   }
   
   .mediPlayer .playing .play {
@@ -1451,8 +1246,8 @@ html, body {
 	  z-index: -1;
   }
   
- 
-  
+
+  /* audo media queries */
   @media only screen and (max-width: 1098px){
 	  #audioline p{
 		  font-size: 1.8rem;
@@ -1473,7 +1268,7 @@ html, body {
   
   
   
-  /* PAINTINGS */
+  /* Paintings */
   .paintings{
 	  font-size: 2.5rem;
 	  letter-spacing: 10px;
@@ -1497,7 +1292,7 @@ html, body {
 	  padding-left: 1rem;
   }
   
-
+/* paingtings media queries */
   @media only screen and (max-width: 1026px){
 	  .paintings{
 		  font-size: 2.5rem;
@@ -1526,10 +1321,9 @@ html, body {
 		  font-size: 1.7rem;
 	  }
   }
-  /* PAINTINGS */
+
   
-  /* THUMBNAILS*/
-  
+  /* Thumnails */
   .container-img1 img{
 	  -webkit-transition: 1s;
 	  transition: 1s;
@@ -1789,7 +1583,7 @@ html, body {
 		  background-size: cover;
 			  }
   
-  
+  /* thumnails media queries */
   @media only screen and (max-width: 1800px){
 	  #p1{
   width:650px ;
@@ -2177,10 +1971,8 @@ html, body {
   
   
   
-  
-  /* Exhibitions */
-  
-  
+   /* exhibitions.html!  */
+  /* Top Section */
   .introduction {
 	  height: 80vh;
 	  display: -webkit-box;
@@ -2212,6 +2004,7 @@ html, body {
 	  transition: 1000ms;
   }
 
+  /*top section media queries */
   @media only screen and (max-width: 1200px){
 	.gal {
 		height: 70%;
@@ -2241,8 +2034,7 @@ html, body {
   
    
   
-  /* CATALOGUE */
-  
+  /* Catalogue */
   .cat-cont2 {
 	  width: 100%;
 	  overflow: hidden;
@@ -2363,13 +2155,13 @@ html, body {
 	font-family: "Assistant";
 	margin:  2rem;
   }
-  
+
+  /*catalogue media queries*/
   @media only screen and (max-width: 1300px) {
 	  .contente{
 		  width: 80%;
 		  }
   }
-  
   @media only screen and (max-width: 500px) {
 	  .contente{
 		  width: 98%;
@@ -2379,7 +2171,7 @@ html, body {
 			  margin: 0;
 			}
   }
-  
+
   .greyc.contente p{
   margin-bottom: 2rem;
   font-size: 1.5rem;
@@ -2396,7 +2188,6 @@ html, body {
 	color: hsl(0, 0%, 95%);
   }
   
-  
   .greyc.contente h3{
 	font-size: 1.7rem;
 	color: hsl(0, 0%, 85%);
@@ -2404,7 +2195,6 @@ html, body {
 	  text-align: left;
   }
  
-	
 	.contente h1{
 	  text-align: left;
 	  padding: .5rem;
