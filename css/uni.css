@@ -1,6 +1,164 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 html, body {
 	scroll-behavior: smooth;
+}
+
+/* Universal Styling */
+/* VIEWBOX */
+.viewbox-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: hsla(0, 0%, 0%, 0.502);
+	z-index: 700;
+}
+.viewbox-body{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: hsl(0, 0%, 100%);
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.6);
+			box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.6);
+	overflow: auto;
+}
+.viewbox-header{
+	margin: 10px;
+}
+.viewbox-content{
+	margin: 10px;
+	width: 300px;
+	height: 300px;
+}
+.viewbox-footer{
+	margin: 10px;
+}
+.viewbox-content .viewbox-image{
+	width: 100%;
+	height: 100%;
+}
+
+/* buttons */
+.viewbox-button-default{
+	cursor: pointer;
+	height: 64px;
+	width: 64px;
+}
+.viewbox-button-default > svg{
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	fill: inherit;
+	pointer-events: none;
+	-webkit-transform: translateX(0px);
+			-ms-transform: translateX(0px);
+		transform: translateX(0px);
+}
+.viewbox-button-default{
+	fill: hsl(0, 0%, 60%);
+}
+.viewbox-button-default:hover{
+	fill: hsl(0, 0%, 100%);
+}
+
+.viewbox-button-close{
+	position:absolute;
+	top:10px;
+	right: 10px;
+	z-index:9;
+}
+.viewbox-button-full-screen{
+	position:absolute;
+	top:84px;
+	right: 10px;
+	z-index:9;
+}
+.viewbox-button-next,
+.viewbox-button-prev{
+	position:absolute;
+	top: 50%;
+	height: 128px;
+	width: 128px;
+	margin: -64px 0 0;
+	z-index:9;
+}
+.viewbox-button-next{
+	right: 10px;
+}
+.viewbox-button-prev{
+	left: 10px;
+}
+@media (max-width: 480px) {
+	.viewbox-button-close{
+		top: 0;
+		right: 0;
+	}
+	.viewbox-button-next,
+	.viewbox-button-prev{
+		height: 81px;
+		width: 81px;
+		margin-top: -40px;
+	}
+	.viewbox-button-next{
+		right:-15px;
+	}
+	.viewbox-button-prev{
+		left:-15px;
+	}
+}
+
+/* loader */
+.viewbox-container .loader{
+	widows: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin:-25px 0 0 -25px;
+}
+.viewbox-container .loader *{
+	margin: 0;
+	padding: 0;
+}
+.viewbox-container .loader .spinner{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+}
+.viewbox-container .loader .double-bounce1,
+.viewbox-container .loader .double-bounce2{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: hsl(0, 0%, 60%);
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+	animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.viewbox-container .loader .double-bounce2 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-bounce{
+	0%, 100% { -webkit-transform: scale(0.0) }
+	50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce{
+	0%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	} 50% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
 }
 
 /* index.html !  */
@@ -12,8 +170,10 @@ html, body {
 	background: lightgrey;
 	display: block;
 	margin-bottom: 6px;
-	box-shadow: 0 1px 2px grey;
+	-webkit-box-shadow: 0 1px 2px grey;
+	        box-shadow: 0 1px 2px grey;
 	-webkit-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
   }
   
@@ -38,6 +198,7 @@ html, body {
 	  letter-spacing: 5px;
 	  color: grey;
 	  -webkit-transition: 200ms;
+	  -o-transition: 200ms;
 	  transition: 200ms;
 	  
   }
@@ -45,6 +206,7 @@ html, body {
   .slidebar p:hover {
 	  font-weight: normal;
 	  -webkit-transition: 200ms;
+	  -o-transition: 200ms;
 	  transition: 200ms;
   }
   
@@ -76,6 +238,7 @@ html, body {
   overflow: hidden;
   margin-left: -30rem;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   opacity: 0;
   }
@@ -84,6 +247,7 @@ html, body {
 	  opacity: 1;
 	  margin-left: 0;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
    
@@ -161,7 +325,8 @@ html, body {
 	position: absolute;
 	background-color: white;
 	min-width: 160px;
-	box-shadow: 0px 4px 4px 0px ;
+	-webkit-box-shadow: 0px 4px 4px 0px ;
+	        box-shadow: 0px 4px 4px 0px ;
 	z-index: 1;
   
 	  text-align: center;
@@ -185,6 +350,7 @@ html, body {
   .shrink .icons {
 	  margin-right: 13rem;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -228,15 +394,21 @@ html, body {
   font-family: 'Assistant', sans-serif;
 	  letter-spacing: 1.5px;
 		  cursor: pointer;
+		  -webkit-transition: 200ms;
+		  -o-transition: 200ms;
 		  transition: 200ms;
   }
 
   .shrink .icons p:hover {
 	  font-weight: normal;
+	  -webkit-transition: 200ms;
+	  -o-transition: 200ms;
 	  transition: 200ms;
   }
  .icons p:hover {
 	font-weight: bold;
+	-webkit-transition: 200ms;
+	-o-transition: 200ms;
 	transition: 200ms;
 
 }
@@ -264,12 +436,14 @@ html, body {
 	  background-color: transparent;
 	  margin-top: 2rem;
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
   }
   
   .shrink.nav {
 	  margin-top: 0;
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms; 
   }
   
@@ -278,12 +452,14 @@ html, body {
 	position: fixed;
 	  font-weight: 300;
 		  -webkit-transition: 2000ms;
+		  -o-transition: 2000ms;
 		  transition: 2000ms;
   }
   
   .shrink .slogan {
 	  padding: 2rem 0 0 11rem;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -312,6 +488,7 @@ html, body {
 			  align-content: space-around;
 		  margin-right: 10rem;
 		  -webkit-transition: 2000ms;
+		  -o-transition: 2000ms;
 		  transition: 2000ms;
   }
   
@@ -320,6 +497,7 @@ html, body {
 	background-color: white;
 	color: hsl(0, 0%, 49%);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   
@@ -364,6 +542,7 @@ html, body {
   .banner.banner-scroll{
 	  width: 95%;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -376,6 +555,7 @@ html, body {
 	  background-size: cover;
 	  height: 100vh;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -398,12 +578,14 @@ html, body {
 	  margin-left: 0;
 	  padding: 0 1rem;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
   .write_up_index_container.active span {
 	  color: white;
 	  -webkit-transition: 3000ms;
+	  -o-transition: 3000ms;
 	  transition: 3000ms;
   }
   
@@ -438,6 +620,7 @@ html, body {
   .write_up_index_container.active #red {
 	color: hsl(182, 29%, 74%);
 	-webkit-transition: 3000ms;
+	-o-transition: 3000ms;
 	transition: 3000ms;
   }
   
@@ -487,6 +670,7 @@ html, body {
   .sign_up.active {
 	background-color: hsla(177, 59%, 58%, 0.09);
 	-webkit-transition: all, 200ms;
+	-o-transition: all, 200ms;
 	transition: all, 200ms;
 }
   
@@ -503,6 +687,7 @@ html, body {
   opacity: 0;
   color: hsla(208, 29%, 39%, 0.588);
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
   
@@ -510,6 +695,7 @@ html, body {
 	  margin-left: 0;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -517,6 +703,7 @@ html, body {
 	  margin-right: 0;
   opacity: 1;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
   
@@ -530,6 +717,7 @@ html, body {
   margin-right: -50rem;
   opacity: 0;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
 
@@ -542,6 +730,8 @@ html, body {
 	height: 50px;
 	text-align: center;
 	opacity: 0;
+	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
 
@@ -553,15 +743,21 @@ html, body {
 	background: white;
 	padding: 0.5rem;
 	opacity: 0;
+	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
 }
 
 .newsletter.active .email_val {
 	  opacity: 1;
+	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   } 
   .newsletter.active .email_submission {
 	opacity: 1;
+	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
 }
  
@@ -596,12 +792,15 @@ html, body {
   /* Home header_imglery */
   .home_header_imglery figure img {
 	  -webkit-transition: 200ms;
+	  -o-transition: 200ms;
 	  transition: 200ms;
   }
   .home_header_imglery figure:hover img {
 	  -webkit-transform: scale(.9);
-			  transform: scale(.9);
+			  -ms-transform: scale(.9);
+	      transform: scale(.9);
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
   }
 
@@ -640,6 +839,7 @@ html, body {
 	  padding-top: 0;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -647,6 +847,7 @@ html, body {
 	  padding-top: 20rem;
 	  opacity: 0;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -751,6 +952,7 @@ html, body {
 	  opacity: 1;
 	  padding-top: 0;
 	  -webkit-transition: 2000ms;
+	  -o-transition:  2000ms;
 	  transition:  2000ms; 
   }
   
@@ -774,6 +976,7 @@ html, body {
   padding-top: 10rem;
   opacity: 0;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
   
@@ -799,7 +1002,7 @@ html, body {
   
   
   /* about.html !  */
-  /* Cover-Img */
+  /* about_header_img */
   .content {
 	min-height: 100vh;
 	display: -webkit-box;
@@ -813,7 +1016,7 @@ html, body {
 			align-items: center;
   }
   
-  .cover-img{
+  .about_header_img{
 	height: 70vh;
 	width: 100%;
 	display: -webkit-box;
@@ -827,10 +1030,11 @@ html, body {
 			align-items: flex-end;
   }
   
-  .cover-img img {
+  .about_header_img img {
 	width: 30vw;
 	height: 50vh;
 	-webkit-transition: all 1500ms ease;
+	-o-transition: all 1500ms ease;
 	transition: all 1500ms ease;
   }
   
@@ -885,13 +1089,15 @@ html, body {
 	opacity: 1;
 	margin-top: 0;
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   
   .write_up_body {
 	opacity: 1;
-	margin-top: 20rem;
+	margin-top: 5rem;
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   
@@ -904,7 +1110,7 @@ html, body {
 	}
 
 	@media only screen and (max-width: 1300px) {
-		.cover-img img {
+		.about_header_img img {
 			width: 40vw;
 	
 		  }
@@ -912,7 +1118,7 @@ html, body {
   
   
 	@media only screen and (max-width: 950px){
-	  .cover-img img {
+	  .about_header_img img {
 		  width: 60vw;
   
 		}
@@ -932,7 +1138,7 @@ html, body {
 	  
   }
   @media only screen and (max-width: 500px){
-	  .cover-img img {
+	  .about_header_img img {
 		  width: 90vw;
 		  height: 40vh;
 	  
@@ -946,159 +1152,7 @@ html, body {
   
   
   /* paintings.html! */
-  /* VIEWBOX */
   
-  .viewbox-container{
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  background: hsla(0, 0%, 0%, 0.502);
-	  z-index: 700;
-  }
-  .viewbox-body{
-	  position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  background: hsl(0, 0%, 100%);
-	  border-radius: 10px;
-	  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.6);
-	  overflow: auto;
-  }
-  .viewbox-header{
-	  margin: 10px;
-  }
-  .viewbox-content{
-	  margin: 10px;
-	  width: 300px;
-	  height: 300px;
-  }
-  .viewbox-footer{
-	  margin: 10px;
-  }
-  .viewbox-content .viewbox-image{
-	  width: 100%;
-	  height: 100%;
-  }
-  
-  /* buttons */
-  .viewbox-button-default{
-	  cursor: pointer;
-	  height: 64px;
-	  width: 64px;
-  }
-  .viewbox-button-default > svg{
-	  width: 100%;
-	  height: 100%;
-	  background: inherit;
-	  fill: inherit;
-	  pointer-events: none;
-	  -webkit-transform: translateX(0px);
-			  transform: translateX(0px);
-  }
-  .viewbox-button-default{
-	  fill: hsl(0, 0%, 60%);
-  }
-  .viewbox-button-default:hover{
-	  fill: hsl(0, 0%, 100%);
-  }
-  
-  .viewbox-button-close{
-	  position:absolute;
-	  top:10px;
-	  right: 10px;
-	  z-index:9;
-  }
-  .viewbox-button-full-screen{
-	  position:absolute;
-	  top:84px;
-	  right: 10px;
-	  z-index:9;
-  }
-  .viewbox-button-next,
-  .viewbox-button-prev{
-	  position:absolute;
-	  top: 50%;
-	  height: 128px;
-	  width: 128px;
-	  margin: -64px 0 0;
-	  z-index:9;
-  }
-  .viewbox-button-next{
-	  right: 10px;
-  }
-  .viewbox-button-prev{
-	  left: 10px;
-  }
-  @media (max-width: 480px) {
-	  .viewbox-button-close{
-		  top: 0;
-		  right: 0;
-	  }
-	  .viewbox-button-next,
-	  .viewbox-button-prev{
-		  height: 81px;
-		  width: 81px;
-		  margin-top: -40px;
-	  }
-	  .viewbox-button-next{
-		  right:-15px;
-	  }
-	  .viewbox-button-prev{
-		  left:-15px;
-	  }
-  }
-  
-  /* loader */
-  .viewbox-container .loader{
-	  widows: 100%;
-	  position: absolute;
-	  left: 50%;
-	  top: 50%;
-	  margin:-25px 0 0 -25px;
-  }
-  .viewbox-container .loader *{
-	  margin: 0;
-	  padding: 0;
-  }
-  .viewbox-container .loader .spinner{
-	  width: 50px;
-	  height: 50px;
-	  position: relative;
-	  margin: 0 auto;
-  }
-  .viewbox-container .loader .double-bounce1,
-  .viewbox-container .loader .double-bounce2{
-	  width: 100%;
-	  height: 100%;
-	  border-radius: 50%;
-	  background-color: hsl(0, 0%, 60%);
-	  opacity: 0.6;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-	  animation: sk-bounce 2.0s infinite ease-in-out;
-  }
-  .viewbox-container .loader .double-bounce2 {
-	  -webkit-animation-delay: -1.0s;
-	  animation-delay: -1.0s;
-  }
-  @-webkit-keyframes sk-bounce{
-	  0%, 100% { -webkit-transform: scale(0.0) }
-	  50% { -webkit-transform: scale(1.0) }
-  }
-  
-  @keyframes sk-bounce{
-	  0%, 100% {
-		  transform: scale(0.0);
-		  -webkit-transform: scale(0.0);
-	  } 50% {
-		  transform: scale(1.0);
-		  -webkit-transform: scale(1.0);
-	  }
-  }
   
   
   
@@ -1160,6 +1214,7 @@ html, body {
   .mediPlayer .progress-bar,
   .mediPlayer .precache-bar {
 	  -webkit-transition: stroke-dashoffset 500ms;
+	  -o-transition        : stroke-dashoffset 500ms;
 	  transition        : stroke-dashoffset 500ms;
   
 	  stroke-dasharray  : 298.1371428256714;
@@ -1199,6 +1254,7 @@ html, body {
 	  width: 100vw;
 	  background-color: hsla(0, 0%, 0%, 0.502);
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -1207,6 +1263,7 @@ html, body {
 	  margin: auto;
 	width: 96vw;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -1242,6 +1299,7 @@ html, body {
 	  background: url("../Media/poster.png");
 	  background-size: cover;
 	  -webkit-transition: 500ms;
+	  -o-transition: 500ms;
 	  transition: 500ms;
 	  z-index: -1;
   }
@@ -1326,16 +1384,19 @@ html, body {
   /* Thumnails */
   .container-img1 img{
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
 	  overflow: hidden;
   }
   .container-img2 img{
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
 	  overflow: hidden;
   }
   .container-img3 img{
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
 	  overflow: hidden;
   }
@@ -1343,16 +1404,19 @@ html, body {
   .container-img1 img:hover{
 	  opacity: .5;
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
   }
   .container-img2 img:hover{
 	  opacity: .5;
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
   }
   .container-img3 img:hover{
 	  opacity: .5;
 	  -webkit-transition: 1s;
+	  -o-transition: 1s;
 	  transition: 1s;
   }
   
@@ -1369,6 +1433,7 @@ html, body {
   
   .photo {
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
 	  overflow: hidden;
 	  padding: .1rem;
@@ -1376,8 +1441,10 @@ html, body {
   
   .photo:hover {
 	  -webkit-transform: scale(0.95);
-			  transform: scale(0.95);
+			  -ms-transform: scale(0.95);
+	      transform: scale(0.95);
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
   }
   
@@ -1392,18 +1459,21 @@ html, body {
 	  padding-top: 0rem;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   .container-img2.active{
 	  padding-top: 0rem;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   .container-img3.active{
 	  padding-top: 0rem;
 	  opacity: 1;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -1415,6 +1485,7 @@ html, body {
 	  display: flex;
 	  opacity: 0;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
 	  -ms-flex-wrap: wrap;
 		  flex-wrap: wrap;
@@ -1428,6 +1499,7 @@ html, body {
 	  width: 100%;
 	  opacity: 0;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
 	  display: -webkit-box;
 	  display: -ms-flexbox;
@@ -1445,6 +1517,8 @@ html, body {
   
 	  -webkit-transition: 2000ms;
   
+	  -o-transition: 2000ms;
+  
 	  transition: 2000ms;
 	  display: -webkit-box;
 	  display: -ms-flexbox;
@@ -1460,12 +1534,14 @@ html, body {
   opacity: 0;
   margin-top: -10rem;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
   .contemporary_header_imglery {
 	  opacity: 0;
   margin-top: -10rem;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
 
@@ -1473,12 +1549,14 @@ html, body {
 	  opacity: 1;
 	  margin-top: 10rem;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
   .contemporary_header_imglery.active {
 	  opacity: 1;
 	  margin-top: 3rem;
   -webkit-transition: 2000ms;
+  -o-transition: 2000ms;
   transition: 2000ms;
   }
 
@@ -1994,6 +2072,7 @@ html, body {
 	  background-image: url("../img/exhibits/history of ehg 7.jpg");
 	  background-blend-mode: color(hsla(0, 0%, 0%, 0.502));
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
 	  background-size: cover;
   }
@@ -2001,6 +2080,7 @@ html, body {
   .header_img.active {
 	  width: 60%;
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
   }
 
@@ -2029,6 +2109,7 @@ html, body {
 	  -webkit-filter: gray;
 			  filter: gray; /* IE 6-9 */
 	  -webkit-transition: 1000ms;
+	  -o-transition: 1000ms;
 	  transition: 1000ms;
   }
   
@@ -2053,7 +2134,11 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -webkit-transition: opacity 5s, -webkit-transform 2s;
+	  transition: opacity 5s, -webkit-transform 2s;
+	  -o-transition: opacity 5s, transform 2s ;
 	  transition: opacity 5s, transform 2s ;
+	  transition: opacity 5s, transform 2s, -webkit-transform 2s;
   }
   .Catalogue2.active {
 	  background: hsl(228, 93%, 11%);
@@ -2061,7 +2146,11 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -webkit-transition: opacity 5s, -webkit-transform 2s;
+	  transition: opacity 5s, -webkit-transform 2s;
+	  -o-transition: opacity 5s, transform 2s ;
 	  transition: opacity 5s, transform 2s ;
+	  transition: opacity 5s, transform 2s, -webkit-transform 2s;
 
   }
   .Catalogue3.active {
@@ -2069,7 +2158,11 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -webkit-transition: opacity 5s, -webkit-transform 2s;
+	  transition: opacity 5s, -webkit-transform 2s;
+	  -o-transition: opacity 5s, transform 2s ;
 	  transition: opacity 5s, transform 2s ;
+	  transition: opacity 5s, transform 2s, -webkit-transform 2s;
   }
   
   .Catalogue1{
@@ -2088,6 +2181,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 			transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
 	opacity: 0;
 	overflow: hidden;
@@ -2111,6 +2205,7 @@ html, body {
 	  -webkit-transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 			  transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
 	
 	}
@@ -2131,6 +2226,7 @@ html, body {
 	  -webkit-transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 			  transform: perspective(1000px) rotateX(-80deg) rotateY(-80deg);
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
 	
 	}
@@ -2215,6 +2311,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2225,6 +2322,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   .photos2.active {
@@ -2232,6 +2330,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2242,6 +2341,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   .photos3.active {
@@ -2249,6 +2349,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2259,6 +2360,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   .photos4.active {
@@ -2266,6 +2368,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2276,6 +2379,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   .photos5.active {
@@ -2283,6 +2387,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2293,6 +2398,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   .photos6.active {
@@ -2300,6 +2406,7 @@ html, body {
 	  -webkit-transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 			  transform: translate3d(0, 0, 400px) rotateY(0) rotateX(0) ;
 	  -webkit-transition: 2000ms;
+	  -o-transition: 2000ms;
 	  transition: 2000ms;
   }
   
@@ -2310,6 +2417,7 @@ html, body {
 	-webkit-transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 			transform: perspective(1000px) rotateX(80deg) rotateY(80deg);
 	-webkit-transition: 2000ms;
+	-o-transition: 2000ms;
 	transition: 2000ms;
   }
   
@@ -2322,6 +2430,7 @@ html, body {
 	border-radius: 5px;
 	background-color: white;
 	-webkit-transition: all 1000ms;
+	-o-transition: all 1000ms;
 	transition: all 1000ms;
   }
   
@@ -2331,7 +2440,8 @@ html, body {
   
   .photoe:hover{
   -webkit-transform: scale(1.1);
-		  transform: scale(1.1);
+		  -ms-transform: scale(1.1);
+      transform: scale(1.1);
   }
   
   .row{
@@ -2369,129 +2479,6 @@ html, body {
 	  }
   
   }
-  
-  
-  
-  /* ViewBox */
-  
-  #loading {
-	  background: hsl(22, 12%, 13%);
-	  width: 100%;
-	  height: 100vh;
-	  position: fixed;
-	  z-index: 50;
-	  display: -webkit-box;
-	  display: -ms-flexbox;
-	  display: flex;
-	  -webkit-box-pack: center;
-		  -ms-flex-pack: center;
-			  justify-content: center;
-	  -webkit-box-align: center;
-		  -ms-flex-align: center;
-			  align-items: center;
-  
-  }
-  
-  .lds-ellipsis {
-	  display: inline-block;
-	  position: relative;
-	  width: 64px;
-	  height: 64px;
-	}
-	.lds-ellipsis div {
-	  position: absolute;
-	  top: 27px;
-	  width: 11px;
-	  height: 11px;
-	  border-radius: 50%;
-	  background: hsl(0, 0%, 100%);
-	  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
-			  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-	}
-	.lds-ellipsis div:nth-child(1) {
-	  left: 6px;
-	  -webkit-animation: lds-ellipsis1 0.6s infinite;
-			  animation: lds-ellipsis1 0.6s infinite;
-	}
-	.lds-ellipsis div:nth-child(2) {
-	  left: 6px;
-	  -webkit-animation: lds-ellipsis2 0.6s infinite;
-			  animation: lds-ellipsis2 0.6s infinite;
-	}
-	.lds-ellipsis div:nth-child(3) {
-	  left: 26px;
-	  -webkit-animation: lds-ellipsis2 0.6s infinite;
-			  animation: lds-ellipsis2 0.6s infinite;
-	}
-	.lds-ellipsis div:nth-child(4) {
-	  left: 45px;
-	  -webkit-animation: lds-ellipsis3 0.6s infinite;
-			  animation: lds-ellipsis3 0.6s infinite;
-	}
-	@-webkit-keyframes lds-ellipsis1 {
-	  0% {
-		-webkit-transform: scale(0);
-				transform: scale(0);
-	  }
-	  100% {
-		-webkit-transform: scale(1);
-				transform: scale(1);
-	  }
-	}
-	@keyframes lds-ellipsis1 {
-	  0% {
-		-webkit-transform: scale(0);
-				transform: scale(0);
-	  }
-	  100% {
-		-webkit-transform: scale(1);
-				transform: scale(1);
-	  }
-	}
-	@-webkit-keyframes lds-ellipsis3 {
-	  0% {
-		-webkit-transform: scale(1);
-				transform: scale(1);
-	  }
-	  100% {
-		-webkit-transform: scale(0);
-				transform: scale(0);
-	  }
-	}
-	@keyframes lds-ellipsis3 {
-	  0% {
-		-webkit-transform: scale(1);
-				transform: scale(1);
-	  }
-	  100% {
-		-webkit-transform: scale(0);
-				transform: scale(0);
-	  }
-	}
-	@-webkit-keyframes lds-ellipsis2 {
-	  0% {
-		-webkit-transform: translate(0, 0);
-				transform: translate(0, 0);
-	  }
-	  100% {
-		-webkit-transform: translate(19px, 0);
-				transform: translate(19px, 0);
-	  }
-	}
-	@keyframes lds-ellipsis2 {
-	  0% {
-		-webkit-transform: translate(0, 0);
-				transform: translate(0, 0);
-	  }
-	  100% {
-		-webkit-transform: translate(19px, 0);
-				transform: translate(19px, 0);
-	  }
-	}
-	
-  /* ViewBox */
-  /* ViewBox */
-  /* ViewBox */
   
   
   
