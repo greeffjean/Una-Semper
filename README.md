@@ -1,3 +1,8 @@
+## Project Title
+
+This project is a basic, fresh demo website for visual artist's, this website is rich in animations and relies on scroll as an trigger.
+
+## Getting Started
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

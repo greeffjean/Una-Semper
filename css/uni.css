@@ -2113,18 +2113,13 @@ html, body {
 	  transition: 1000ms;
   }
   
-   
   
   /* Catalogue */
-  .cat-cont2 {
+  .catalogue-content2 {
 	  width: 100%;
 	  overflow: hidden;
   }
-  .cat-cont3 {
-	  width: 100%;
-	  overflow: hidden;
-  }
-  
+
   #photo:hover{
 	  opacity: .5;
   }
