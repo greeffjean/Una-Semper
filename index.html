@@ -183,9 +183,16 @@
     })
     $(".email_submission").on("click", function (event) {
       event.preventDefault();
-      $(".email_val").val("");
-      $('.email_val').css({background: "hsl(120, 57%, 91%)"})
+      if($(".email_val").val().indexOf("@") != -1){
+        $(".email_val").val("")
+        $('.email_val').css({background: "hsl(120, 57%, 91%)"})
       $('.email_val').attr("placeholder", "Success!")
+      }
+      else {
+        $(".email_val").val("")
+        $('.email_val').css({background: "hsla(352, 59%, 58%, 0.09)"})
+      $('.email_val').attr("placeholder", "Error!")
+      }
       setTimeout(function(){
         $('.email_val').css({background: "none"})
       $('.email_val').attr("placeholder", "Enter your email address")
