@@ -789,13 +789,13 @@ html, body {
   }
   
 
-  /* Home header_imglery */
-  .home_header_imglery figure img {
+  /* Home Gallery */
+  .home_gallery figure img {
 	  -webkit-transition: 200ms;
 	  -o-transition: 200ms;
 	  transition: 200ms;
   }
-  .home_header_imglery figure:hover img {
+  .home_gallery figure:hover img {
 	  -webkit-transform: scale(.9);
 			  -ms-transform: scale(.9);
 	      transform: scale(.9);
@@ -804,7 +804,7 @@ html, body {
 	  transition: 1000ms;
   }
 
-  .home_header_imglery{
+  .home_gallery{
 	width: 98%;
 	height: 80vh; 
   display: -webkit-box; 
@@ -1327,6 +1327,10 @@ html, body {
   
   
   /* Paintings */
+.top_gallery {
+	margin-top: 8rem;
+}
+
   .paintings{
 	  font-size: 2.5rem;
 	  letter-spacing: 10px;
