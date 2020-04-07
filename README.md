@@ -1,73 +1,39 @@
 ## Project Title
+Una Semper - This is a fresh website art for a fictional character. The viewer will find - 
+1. Landing Page.
+2. About page.
+3. Paintings page.
+4. Exhibitions page.
 
-This project is a basic, fresh demo website for visual artist's, this website is rich in animations and relies on scroll as an trigger.
 
-## Getting Started
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
+You will need an internet connection, and a Code Editor installed (Atom, Visual Studio ).
 
-## Available Scripts
+## Installing
+1. Install the latest version of NodeJS
 
-In the project directory, you can run:
+## Deployment 
+1. Install surge by using npm (Node Package Manager), run `npm install -g surge` in your terminal.
+2. Open your Code Editor.
+2. Run `npx surge` in your Code Editor terminal.
+4. If you are unfimiliar with surge please visit - (https://surge.sh/help/getting-started-with-surge).
 
-### `npm start`
+## Built With 
+Visual Studio Code
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Contributing
+none
 
-### `npm test`
+## Versioning
+none
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Authors
+Jean Greeff, GitHub - https://github.com/greeffjean
 
-### `npm run build`
+## License
+none
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Acknowledgments
+This project was completed in 2019, Practicing CSS and Conceptualising Design.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
